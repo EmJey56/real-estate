@@ -1,0 +1,178 @@
+/* contact.scss */
+.contact-wrapper {
+  width: 100%;
+  min-height: 100vh; /* Ensure it covers the full height of the viewport */
+  margin: 0;
+  padding: 0;
+  background-image: url('./3.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: rgba(248, 248, 248, 0.8); /* Slight transparency for the header */
+  backdrop-filter: blur(10px); /* Optional blur effect */
+  border-radius: 0; /* Remove rounded corners if any */
+}
+
+.contact-logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.contact-nav {
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+
+    li {
+      a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #0077b6;
+        }
+      }
+    }
+  }
+}
+
+.contact-section {
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  max-width: 100%; /* Make sure it's not limited in width */
+  width: 100%;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-section p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  label {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #0077b6;
+      outline: none;
+    }
+  }
+
+  button {
+    padding: 14px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #0077b6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #005f8e;
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+
+  a {
+    color: #333;
+    font-size: 1.3rem;
+
+    &:hover {
+      color: #0077b6;
+    }
+  }
+}
+
+.contact-info {
+  margin-top: 40px;
+  text-align: center;
+
+  p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.privacy {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #333;
+  z-index: 100;
+
+  &.success {
+    background-color: #28a745;
+  }
+
+  &.error {
+    background-color: #dc3545;
+  }
+}
